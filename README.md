@@ -1,6 +1,7 @@
-## Summary
+### Summary
+
 You can connect to MCP server at `https://jobswithgpt.com/mcp/` to both Claude Desktop (as a local MCP client) and the OpenAI Responses API (as a remote MCP tool).  
----
+
 
 ### Configuring Claude Desktop as an MCP Client  
 Paste under `"mcpServers"`:
@@ -18,6 +19,7 @@ Paste under `"mcpServers"`:
     }
   }
 }
+```
 
 ### OpenAI instructions
 
@@ -45,6 +47,7 @@ resp = client.responses.create(
 
 print(resp.output_text)
 ```
+#### Example output
 ```
 Here are some Python developer job opportunities in San Francisco:
 
