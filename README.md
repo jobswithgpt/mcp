@@ -1,27 +1,12 @@
-### Summary
-
-You can connect to MCP server at `https://jobswithgpt.com/mcp/` to both Claude Desktop (as a local MCP client) and the OpenAI Responses API (as a remote MCP tool).  
-
-
-### Configuring Claude Desktop as an MCP Client  
-Paste under `"mcpServers"`:
-
-```json
-{
-  "mcpServers": {
-    "jobswithgpt": {
-      "command": "curl",
-      "args": [
-        "-X", "POST",
-        "-H", "Content-Type: application/json",
-        "https://jobswithgpt.com/mcp/"
-      ]
-    }
-  }
-}
+### Configuring Claude Desktop as an MCP Client
+1. Install uv with python version > 3.12 for your OS.
+2. Install the mcp server - easy!
+```
+uv run mcp install server.py
 ```
 
 ### OpenAI instructions
+OpenAI can directly use the server hosted MCP server (https://jobswithgpt.com/mcp/)
 
 ```python
 import openai
