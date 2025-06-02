@@ -4,6 +4,17 @@
 ```
 uv run mcp install server.py
 ```
+```
+mcp % uv run mcp install server.py
+Using CPython 3.12.3
+Creating virtual environment at: .venv
+Installed 27 packages in 23ms
+[06/02/25 11:25:38] INFO     Added server 'jobswithgpt_search' to  claude.py:143
+                             Claude config                                      
+                    INFO     Successfully installed                   cli.py:504
+                             jobswithgpt_search in Claude app                   
+mcp % 
+```
 
 ### OpenAI instructions
 OpenAI can directly use the server hosted MCP server (https://jobswithgpt.com/mcp/)
