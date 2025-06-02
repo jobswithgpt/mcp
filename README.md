@@ -15,6 +15,9 @@ Installed 27 packages in 23ms
                              jobswithgpt_search in Claude app                   
 mcp % 
 ```
+```
+Example query: "Find ML jobs in SF"
+```
 
 ### OpenAI instructions
 OpenAI can directly use the server hosted MCP server (https://jobswithgpt.com/mcp/)
