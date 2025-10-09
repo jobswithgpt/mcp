@@ -18,7 +18,7 @@ Locate (or create) the Claude Desktop config file:
 
 ---
 
-## 3. Add Local Proxy Definition
+#### 3. Add Local Proxy Definition
 
 Insert this JSON:
 
