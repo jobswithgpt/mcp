@@ -1,26 +1,53 @@
 ### Configuring Claude Desktop as an MCP Client
-1. Install uv with python version > 3.12 for your OS.
-2. Install the mcp server - easy!
-```
-uv run mcp install server.py
-```
-```
-mcp % uv run mcp install server.py
-Using CPython 3.12.3
-Creating virtual environment at: .venv
-Installed 27 packages in 23ms
-[06/02/25 11:25:38] INFO     Added server 'jobswithgpt_search' to  claude.py:143
-                             Claude config                                      
-                    INFO     Successfully installed                   cli.py:504
-                             jobswithgpt_search in Claude app                   
-mcp % 
-```
-```
-Example query: "Find ML jobs in SF"
+1. If you have PRO account, you can directly add as hosted MCP connector (https://jobswithgpt.com/mcp)
+2. If you have a free account, you can add a proxy to the hosted MCP.
+#### 1. Prerequisites
+
+* **Claude Desktop Free** (installed)
+* **Node.js ≥ 18** (for `npx`)
+
+
+#### 2. Create or Edit Claude Config
+
+Locate (or create) the Claude Desktop config file:
+
+* **macOS:**
+  `~/Library/Application Support/Claude/claude_desktop_config.json`
+* **Windows:**
+  `%APPDATA%\Claude\claude_desktop_config.json`
+
+---
+
+## 3. Add Local Proxy Definition
+
+Insert this JSON:
+
+```json
+{
+  "mcpServers": {
+    "jobswithgpt": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote@latest",
+        "https://jobswithgpt.com/mcp/stream"
+      ]
+    }
+  }
+}
 ```
 
+---
+
+#### 4. Restart Claude Desktop
+
+Quit Claude Desktop completely and reopen it.
+
+Your new server **jobswithgpt** should appear in the **paperclip menu** under Tools.
+
+
 ### OpenAI instructions
-OpenAI can directly use the server hosted MCP server (https://jobswithgpt.com/mcp/)
+OpenAI can directly use the server hosted MCP server (https://jobswithgpt.com/mcp)
 
 ```python
 import asyncio
