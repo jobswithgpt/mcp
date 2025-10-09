@@ -23,28 +23,28 @@ Example query: "Find ML jobs in SF"
 OpenAI can directly use the server hosted MCP server (https://jobswithgpt.com/mcp/)
 
 ```python
-import openai
+import asyncio
+from agents import Agent, Runner
+from agents.mcp.server import MCPServerStreamableHttp
+import json
 
-client = openai.OpenAI()
+MCP_URL = "https://jobswithgpt.com/mcp"  # your FastMCP streamable HTTP endpoint
 
-resp = client.responses.create(
-    model="gpt-4.1-mini",
-    tools=[
-        {
-            "type": "mcp",
-            "server_label": "jobswithgpt",
-            "server_url": "https://jobswithgpt.com/mcp/",
-            "require_approval": {
-                "never": {
-                    "tool_names": ["search_jobs"]
-                }
-            }
-        },
-    ],
-    input="find jobs for python devs in sf"
-)
+async def main():
+    async with MCPServerStreamableHttp(params={"url": MCP_URL}, name="jobswithgpt") as server:
+        agent = Agent(
+            name="jobs-mcp-local",
+            mcp_servers=[server],
+            instructions=(
+                "Use the MCP server tools. First call location_autocomplete to get a geonameid "
+                "for 'Seattle', then call search_jobs with keywords=['python'] and that geonameid."
+            ),
+        )
+        res = await Runner.run(agent, "Find machine learning jobs in san francisco.")
+        print(res.final_output)
 
-print(resp.output_text)
+if __name__ == "__main__":
+    asyncio.run(main())
 ```
 #### Example output
 ```
