@@ -30,7 +30,7 @@ Insert this JSON:
       "args": [
         "-y",
         "mcp-remote@latest",
-        "https://jobswithgpt.com/mcp/stream"
+        "https://jobswithgpt.com/mcp"
       ]
     }
   }
