@@ -1,3 +1,17 @@
+# MCP Create Server
+
+[![NPM version](http://img.shields.io/npm/v/mcp.svg?style=flat-square)](https://www.npmjs.org/package/mcp)
+
+A dynamic MCP server management service that creates, runs, and manages Model Context Protocol (MCP) servers dynamically. This service itself functions as an MCP server and launches/manages other MCP servers as child processes, enabling a flexible MCP ecosystem.
+
+<a href="https://glama.ai/mcp/servers/@jobswithgpt/mcp">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@jobswithgpt/mcp/badge" alt="jobswithgpt MCP server" />
+</a>
+
+## Key Features
+
+...
+
 ### Configuring Claude Desktop as an MCP Client
 1. If you have PRO account, you can directly add as hosted MCP connector (https://jobswithgpt.com/mcp)
 2. If you have a free account, you can add a proxy to the hosted MCP.
