@@ -1,0 +1,20 @@
+{
+  "name": "corvi-careers",
+  "interface": {
+    "displayName": "Corvi Careers"
+  },
+  "plugins": [
+    {
+      "name": "corvi-careers",
+      "source": {
+        "source": "local",
+        "path": "./plugins/corvi-careers"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
