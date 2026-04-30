@@ -52,6 +52,16 @@ For clients that expect a local stdio MCP server, use `mcp-remote`:
 }
 ```
 
+## OpenClaw / ClawHub
+
+An OpenClaw skill package is included at:
+
+```text
+openclaw/corvi-careers
+```
+
+It can be published to ClawHub as the `corvi-careers` skill.
+
 ## Plugin Documentation
 
 See the plugin README:
