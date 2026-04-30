@@ -1,0 +1,44 @@
+{
+  "name": "corvi-careers",
+  "version": "0.1.0",
+  "description": "Search jobs across remote and onsite postings with Corvi Careers.",
+  "author": {
+    "name": "sspworks LLC",
+    "email": "support@corvi.careers",
+    "url": "https://corvi.careers"
+  },
+  "homepage": "https://corvi.careers",
+  "repository": "https://github.com/jobswithgpt/mcp",
+  "license": "MIT",
+  "keywords": [
+    "careers",
+    "jobs",
+    "hiring"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Corvi Careers",
+    "shortDescription": "Search remote and onsite jobs with privacy-first tools.",
+    "longDescription": "Corvi Careers is an independent SF Bay Area project operated by sspworks LLC. Use it to search across 1M+ postings, refine queries with AI assistance, browse by category or location, and inspect job details through its MCP server.",
+    "developerName": "sspworks LLC",
+    "category": "Productivity",
+    "capabilities": [
+      "Search",
+      "Jobs",
+      "MCP"
+    ],
+    "websiteURL": "https://corvi.careers",
+    "privacyPolicyURL": "https://corvi.careers/privacy/",
+    "termsOfServiceURL": "https://corvi.careers/terms/",
+    "defaultPrompt": [
+      "Find software engineering jobs near San Francisco.",
+      "Search remote AI roles that match my background.",
+      "Summarize this job posting and key requirements."
+    ],
+    "brandColor": "#2563EB",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png",
+    "screenshots": []
+  }
+}

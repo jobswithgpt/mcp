@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "corvi-careers": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote@latest",
+        "https://corvi.careers/mcp"
+      ]
+    }
+  }
+}
